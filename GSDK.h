@@ -626,38 +626,38 @@ public:
 	BYTE allowDamage; //0x027C 
 	BYTE locked; //0x027D 0 = moving, 1 = not moving
 	BYTE lockedAsWaiting; //0x027E 
-	char _0x027F[973];
-	CGameVariablesTable* GameVariables; //0x064C 
-	__int32 GameVariables_Count; //0x0650 
-	char _0x0654[404];
-	__int32 playerid; //0x07E8 
-	char _0x07EC[560];
-	CItem *InventorySlot[12]; //0x0A1C 
-	CItem *QuickSlot[10]; //0x0A4C 
-	char _0x0A74[12];
-	CWeaponPtr* weapon; //0x0A80 
-	char _0x0A84[8];
-	float pitch[30]; //0x0A8C 
-	char _0x0B04[312];
-	float recoil; //0x0C3C 
-	char _0x0C40[8];
-	float recoilRandomX; //0x0C48 
-	float recoilRandomY; //0x0C4C 
-	float recoilRandomZ; //0x0C50 
-	char _0x0C54[4];
-	float fatigue_diff; //0x0C58 
-	float fatigue; //0x0C5C 
-	char _0x0C60[20];
-	BYTE swim; //0x0C74 
-	char _0x0C75[107];
-	WORD state2; //0x0CE0 
-	char _0x0CE2[6];
-	WORD state; //0x0CE8 
-	char _0x0CEA[1534];
-	BYTE stance; //0x12E8 
-	char _0x12E9[3];
+	char _0x027F[993];
+	CGameVariablesTable* GameVariables; //0x0660 
+	__int32 GameVariables_Count; //0x0664 
+	char _0x0668[408];
+	__int32 playerid; //0x0800 
+	char _0x0804[560];
+	CItem *InventorySlot[12]; //0x0A34 
+	CItem *QuickSlot[10]; //0x0A64 
+	char _0x0A8C[12];
+	CWeaponPtr* weapon; //0x0A98 
+	char _0x0A9C[8];
+	float pitch[30]; //0x0AA4 
+	char _0x0B1C[312];
+	float recoil; //0x0C54 
+	char _0x0C58[8];
+	float recoilRandomX; //0x0C60 
+	float recoilRandomY; //0x0C64 
+	float recoilRandomZ; //0x0C68 
+	char _0x0C6C[4];
+	float fatigue_diff; //0x0C70 
+	float fatigue; //0x0C74 
+	char _0x0C78[20];
+	BYTE swim; //0x0C8C 
+	char _0x0C8D[107];
+	WORD state2; //0x0CF8 
+	char _0x0CFA[6];
+	WORD state; //0x0D00 
+	char _0x0D02[1534];
+	BYTE stance; //0x1300 
+	char _0x1301[3];
 
-};//Size=0x12EC
+};//Size=0x1304
 
 /*
 004CBB31  \.^\EB E8         jmp short DayZ.004CBB1B
@@ -709,19 +709,20 @@ class CWeapon {
 public:
 	char _0x0000[112];
 	CObjectClass* ObjectClass; //0x0070 
-	char _0x0074[1560];
-	CItem **slots; //0x068C 
-	__int32 num_slots; //0x0690 
-	DWORD ammo_test1; //0x0694 
-	char _0x0698[8];
-	DWORD ammo_count1; //0x06A0 
-	char _0x06A4[4];
-	CWeaponPtr* magazine; //0x06A8 
-	DWORD ammo_test2; //0x06AC 
+	char _0x0074[1584];
+	CItem **slots; //0x06A4 
+	__int32 num_slots; //0x06A8 
+	DWORD ammo_test1; //0x06AC 
 	char _0x06B0[8];
-	DWORD ammo_count2; //0x06B8 
+	DWORD ammo_count1; //0x06B8 
+	char _0x06BC[4];
+	CWeaponPtr* magazine; //0x06C0 
+	DWORD ammo_test2; //0x06C4 
+	char _0x06C8[8];
+	DWORD ammo_count2; //0x06D0 
+	char _0x06D4[64];
 
-};//Size=0x06BC
+};//Size=0x0714
 
 class CWeaponPtr
 {
@@ -758,34 +759,44 @@ public:
 	CArmaString* ObjectModelPath; //0x003C 
 	char _0x0040[48];
 	CArmaString* ObjectName; //0x0070 
-	char _0x0074[1304];
-	CArmaString* CleanObjectName; //0x058C 
-	CArmaString* CleanObjectName2; //0x0590 
-	CArmaString* ObjectInternalName; //0x0594 
-	char _0x0598[1236];
-	__int32 inventorySlotId; //0x0A6C 
-	char _0x0A70[144];
-	BYTE showInHands; //0x0B00 
-	BYTE N003B743A; //0x0B01 
-	BYTE handheld; //0x0B02 
-	BYTE autoQuickbar; //0x0B03 
-	BYTE openable; //0x0B04 
-	BYTE rotateDropped; //0x0B05 
-	BYTE rotateInvert; //0x0B06 
-	BYTE rotateZ; //0x0B07 
-	__int32 max_stack; //0x0B08 
-	float spawnDamageMax; //0x0B0C 
-	BYTE melee; //0x0B10 
-	char _0x0B11[11];
-	BYTE visible; //0x0B1C 
-	BYTE N0E3A4F96; //0x0B1D 
-	BYTE N00293F77; //0x0B1E 
-	BYTE N0E3A4F97; //0x0B1F 
-	BYTE slots_needed; //0x0B20 
-	char _0x0B21[99];
-	DWORD max_ammo; //0x0B84 
+	char _0x0074[1308];
+	CArmaString* CleanObjectName; //0x0590 
+	CArmaString* CleanObjectName2; //0x0594 
+	CArmaString* ObjectInternalName; //0x0598 
+	char _0x059C[1236];
+	__int32 inventorySlotId; //0x0A70 
+	char _0x0A74[40];
+	CArmaString* N05791D36; //0x0A9C 
+	CArmaString* N05791D37; //0x0AA0 
+	char _0x0AA4[96];
+	BYTE showInHands; //0x0B04 
+	BYTE N003B743A; //0x0B05 
+	BYTE handheld; //0x0B06 
+	BYTE autoQuickbar; //0x0B07 
+	BYTE openable; //0x0B08 
+	BYTE rotateDropped; //0x0B09 
+	BYTE rotateInvert; //0x0B0A 
+	BYTE rotateZ; //0x0B0B 
+	__int32 max_stack; //0x0B0C 
+	float spawnDamageMax; //0x0B10 
+	BYTE melee; //0x0B14 
+	char _0x0B15[11];
+	BYTE visible; //0x0B20 
+	BYTE N0E3A4F96; //0x0B21 
+	BYTE N00293F77; //0x0B22 
+	BYTE N0E3A4F97; //0x0B23 
+	BYTE slots_needed; //0x0B24 
+	char _0x0B25[3];
+	GVector min; //0x0B28 
+	GVector max; //0x0B34 
+	GVector aside; //0x0B40 
+	GVector up; //0x0B4C 
+	GVector dir; //0x0B58 
+	CArmaString* armAction; //0x0B64 
+	char _0x0B68[32];
+	DWORD max_ammo; //0x0B88 
 
-};//Size=0x0B88
+};//Size=0x0B8C
 
 class CArmaString
 {

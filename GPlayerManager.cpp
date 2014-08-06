@@ -1489,12 +1489,10 @@ void GPlayerManager::DropItem(CObject *player, CItem *item)
 	//006415B0    56              push esi
 	//00644F60    56              push esi
 	//00646FF0    56              push esi
+	//006466A0    56              push esi
 
 
-
-
-
-	DWORD address = 0x00646FF0; //81 ?? ?? F8 FF FF E9 -F8
+	DWORD address = 0x006466A0; //81 ?? ?? F8 FF FF E9 -F8
 	//81C1????FFFFE8????????C20800
 	//5F5EB0015BC20400CCCC56
 
