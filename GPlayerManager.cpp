@@ -685,8 +685,8 @@ void GPlayerManager::DoPointerSearch()
 	DWORD start = g_pTools->GetModuleAddress();
 	DWORD size = g_pTools->GetModuleSize();
 
-	BYTE base_pattern[] = "\x8B\x0D\x00\x00\x00\x00\x56\x81\xC1\x10\x0D\x00\x00";
-	char base_mask[32] = { 0 }; strcpy(base_mask, /*xx????xxxxxx*/XorStr<0xbb, 13, 0x1d831eeb>("\xc3\xc4\x82\x81\x80\xff\xb9\xba\xbb\xbc\xbd\xbe" + 0x1d831eeb).s);
+	BYTE base_pattern[] = "\x8B\x0D\x00\x00\x00\x00\x8B\x91\x00\x00\x00\x00\x8B\x42\x04";
+	char base_mask[32] = { 0 }; strcpy(base_mask, "xx????xx????xxx");
 	long base_fix = 0x02;
 
 	//004E98D0    B8 50510701     mov eax, DayZ_0_4.01075150               ; b8????????C3CCCCCCCCCCCC
@@ -1491,8 +1491,11 @@ void GPlayerManager::DropItem(CObject *player, CItem *item)
 	//00646FF0    56              push esi
 	//006466A0    56              push esi
 	//00657010    56              push esi
+	//00656F30    56              push esi
 
-	DWORD address = 0x00657010; //81 ?? ?? F8 FF FF E9 -F8
+
+
+	DWORD address = 0x00656F30; //81 ?? ?? F8 FF FF E9 -F8
 	//81C1????FFFFE8????????C20800
 	//5F5EB0015BC20400CCCC56
 

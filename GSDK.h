@@ -335,36 +335,37 @@ public:
 };//Size=0x0014
 
 
-class CWorld {
+class CWorld
+{
 public:
-	char _0x0000[1912];
-	CObjectTable* Objects; //0x0778 
-	char _0x077C[572];
-	CObjTbl SmokeEffectsTable; //0x09B8  
-	char _0x09CC[168];
-	CObjTbl AnimalTable; //0x0A74 
-	char _0x0A88[148];
-	CObjTbl FarAnimalTable; //0x0B1C 
-	char _0x0B30[316];
-	CObjTbl FarFarAnimalTable; //0x0C6C   up to 1000 worldunits
-	char _0x0C80[152];
-	CObjTbl EffectsTable; //0x0D18 
-	char _0x0D2C[148];
-	CObjTbl FarEffectsTable; //0x0DC0 
-	char _0x0DD4[488];
-	CObjTbl DroppedItemTable; //0x0FBC 
-	char _0x0FD0[148];
-	CObjTbl FarDroppedItemTable; //0x1064 didnt check that one
-	char _0x1078[316];
-	CObjTbl ItemTable; //0x11B4 
-	char _0x11C8[148];
-	CObjTbl FarBuildingTable; //0x125C   PAPI, municipal office 
-	char _0x1270[192];
-	CObjTbl InvalidItemTable; //0x1330 
-	char _0x1344[848];
-	CEntity* LocalPlayer; //0x1694 
+	char _0x0000[1916];
+	CObjectTable* Objects; //0x077C 
+	char _0x0780[572];
+	CObjTbl SmokeEffectsTable; //0x09BC  
+	char _0x09D0[168];
+	CObjTbl AnimalTable; //0x0A78 
+	char _0x0A8C[148];
+	CObjTbl FarAnimalTable; //0x0B20 
+	char _0x0B34[316];
+	CObjTbl FarFarAnimalTable; //0x0C70   up to 1000 worldunits
+	char _0x0C84[152];
+	CObjTbl EffectsTable; //0x0D1C 
+	char _0x0D30[148];
+	CObjTbl FarEffectsTable; //0x0DC4 
+	char _0x0DD8[488];
+	CObjTbl DroppedItemTable; //0x0FC0 
+	char _0x0FD4[148];
+	CObjTbl FarDroppedItemTable; //0x1068 didnt check that one
+	char _0x107C[316];
+	CObjTbl ItemTable; //0x11B8 
+	char _0x11CC[148];
+	CObjTbl FarBuildingTable; //0x1260   PAPI, municipal office 
+	char _0x1274[192];
+	CObjTbl InvalidItemTable; //0x1334 
+	char _0x1348[848];
+	CEntity* LocalPlayer; //0x1698 
 
-};//Size=0x1698
+};//Size=0x169C
 //v44
 //class CWorld {
 //public:
@@ -751,7 +752,8 @@ public:
 
 };//Size=0x0148
 
-class CObjectClass {
+class CObjectClass
+{
 public:
 	char _0x0000[52];
 	CArmaString* ObjectClassName; //0x0034 
@@ -759,44 +761,44 @@ public:
 	CArmaString* ObjectModelPath; //0x003C 
 	char _0x0040[48];
 	CArmaString* ObjectName; //0x0070 
-	char _0x0074[1308];
-	CArmaString* CleanObjectName; //0x0590 
-	CArmaString* CleanObjectName2; //0x0594 
-	CArmaString* ObjectInternalName; //0x0598 
-	char _0x059C[1236];
-	__int32 inventorySlotId; //0x0A70 
-	char _0x0A74[40];
-	CArmaString* N05791D36; //0x0A9C 
-	CArmaString* N05791D37; //0x0AA0 
-	char _0x0AA4[96];
-	BYTE showInHands; //0x0B04 
-	BYTE N003B743A; //0x0B05 
-	BYTE handheld; //0x0B06 
-	BYTE autoQuickbar; //0x0B07 
-	BYTE openable; //0x0B08 
-	BYTE rotateDropped; //0x0B09 
-	BYTE rotateInvert; //0x0B0A 
-	BYTE rotateZ; //0x0B0B 
-	__int32 max_stack; //0x0B0C 
-	float spawnDamageMax; //0x0B10 
-	BYTE melee; //0x0B14 
-	char _0x0B15[11];
-	BYTE visible; //0x0B20 
-	BYTE N0E3A4F96; //0x0B21 
-	BYTE N00293F77; //0x0B22 
-	BYTE N0E3A4F97; //0x0B23 
-	BYTE slots_needed; //0x0B24 
-	char _0x0B25[3];
-	GVector min; //0x0B28 
-	GVector max; //0x0B34 
-	GVector aside; //0x0B40 
-	GVector up; //0x0B4C 
-	GVector dir; //0x0B58 
-	CArmaString* armAction; //0x0B64 
-	char _0x0B68[32];
-	DWORD max_ammo; //0x0B88 
+	char _0x0074[1320];
+	CArmaString* CleanObjectName; //0x059C 
+	CArmaString* CleanObjectName2; //0x05A0 
+	CArmaString* ObjectInternalName; //0x05A4 
+	char _0x05A8[1236];
+	__int32 inventorySlotId; //0x0A7C 
+	char _0x0A80[40];
+	CArmaString* N05791D36; //0x0AA8 
+	CArmaString* N05791D37; //0x0AAC 
+	char _0x0AB0[96];
+	BYTE showInHands; //0x0B10 
+	BYTE N003B743A; //0x0B11 
+	BYTE handheld; //0x0B12 
+	BYTE autoQuickbar; //0x0B13 
+	BYTE openable; //0x0B14 
+	BYTE rotateDropped; //0x0B15 
+	BYTE rotateInvert; //0x0B16 
+	BYTE rotateZ; //0x0B17 
+	__int32 max_stack; //0x0B18 
+	float spawnDamageMax; //0x0B1C 
+	BYTE melee; //0x0B20 
+	char _0x0B21[11];
+	BYTE visible; //0x0B2C 
+	BYTE N0E3A4F96; //0x0B2D 
+	BYTE N00293F77; //0x0B2E 
+	BYTE N0E3A4F97; //0x0B2F 
+	BYTE slots_needed; //0x0B30 
+	char _0x0B31[3];
+	GVector min; //0x0B34 
+	GVector max; //0x0B40 
+	GVector aside; //0x0B4C 
+	GVector up; //0x0B58 
+	GVector dir; //0x0B64 
+	CArmaString* armAction; //0x0B70 
+	char _0x0B74[32];
+	DWORD max_ammo; //0x0B94 
 
-};//Size=0x0B8C
+};//Size=0x0B98
 
 class CArmaString
 {
