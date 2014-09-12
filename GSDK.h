@@ -582,83 +582,85 @@ public:
 	char _0x0190[756];
 };
 
-class CItem {
+class CItem
+{
 public:
 	char _0x0000[36];
 	CObjectVisualState* visualstate; //0x0024 
 	CBound* bounds; //0x0028 
 	char _0x002C[68];
 	CObjectClass* ObjectClass; //0x0070 
-	char _0x0074[298];
-	BYTE reset; //0x019E 
-	char _0x019F[213];
-	BYTE ruined; //0x0274 
-	char _0x0275[15];
-	CItemContainer* ItemContainer; //0x0284 
+	char _0x0074[302];
+	BYTE reset; //0x01A2 
+	char _0x01A3[225];
+	BYTE ruined; //0x0284 
+	char _0x0285[15];
+	CItemContainer* ItemContainer; //0x0294 
 
-};//Size=0x0288
+};//Size=0x0298
 
 
-class CObject {
+class CObject
+{
 public:
 	char _0x0000[36];
 	CObjectVisualState* visualstate; //0x0024 
 	CBound* bounds; //0x0028 
 	char _0x002C[68];
 	CObjectClass* ObjectClass; //0x0070 
-	char _0x0074[76];
-	DWORD time; //0x00C0 
-	char _0x00C4[212];
-	BYTE objectContact; //0x0198 
-	BYTE landContact; //0x0199 
-	BYTE waterContact; //0x019A 
-	BYTE _delete; //0x019B 
-	BYTE local; //0x019C 
-	BYTE invisble; //0x019D 
-	char _0x019E[214];
-	BYTE isDead; //0x0274 
-	BYTE isStopped; //0x0275 
-	BYTE inFormation; //0x0276 
-	BYTE showFlag; //0x0277 
-	BYTE isUpsideDown; //0x0278 
-	BYTE userStopped; //0x0279 
-	BYTE pilotLight; //0x027A 
-	BYTE collisionLight; //0x027B 
-	BYTE allowDamage; //0x027C 
-	BYTE locked; //0x027D 0 = moving, 1 = not moving
-	BYTE lockedAsWaiting; //0x027E 
-	char _0x027F[993];
-	CGameVariablesTable* GameVariables; //0x0660 
-	__int32 GameVariables_Count; //0x0664 
-	char _0x0668[408];
-	__int32 playerid; //0x0800 
-	char _0x0804[560];
-	CItem *InventorySlot[12]; //0x0A34 
-	CItem *QuickSlot[10]; //0x0A64 
-	char _0x0A8C[12];
-	CWeaponPtr* weapon; //0x0A98 
-	char _0x0A9C[8];
-	float pitch[30]; //0x0AA4 
-	char _0x0B1C[312];
-	float recoil; //0x0C54 
-	char _0x0C58[8];
-	float recoilRandomX; //0x0C60 
-	float recoilRandomY; //0x0C64 
-	float recoilRandomZ; //0x0C68 
-	char _0x0C6C[4];
-	float fatigue_diff; //0x0C70 
-	float fatigue; //0x0C74 
-	char _0x0C78[20];
-	BYTE swim; //0x0C8C 
-	char _0x0C8D[107];
-	WORD state2; //0x0CF8 
-	char _0x0CFA[6];
-	WORD state; //0x0D00 
-	char _0x0D02[1534];
-	BYTE stance; //0x1300 
-	char _0x1301[3];
+	char _0x0074[80];
+	DWORD time; //0x00C4 
+	char _0x00C8[212];
+	BYTE objectContact; //0x019C 
+	BYTE landContact; //0x019D 
+	BYTE waterContact; //0x019E 
+	BYTE _delete; //0x019F 
+	BYTE local; //0x01A0 
+	BYTE invisble; //0x01A1 
+	char _0x01A2[226];
+	BYTE isDead; //0x0284 
+	BYTE isStopped; //0x0285 
+	BYTE inFormation; //0x0286 
+	BYTE showFlag; //0x0287 
+	BYTE isUpsideDown; //0x0288 
+	BYTE userStopped; //0x0289 
+	BYTE pilotLight; //0x028A 
+	BYTE collisionLight; //0x028B 
+	BYTE allowDamage; //0x028C 
+	BYTE locked; //0x028D 0 = moving, 1 = not moving
+	BYTE lockedAsWaiting; //0x028E 
+	char _0x028F[997];
+	CGameVariablesTable* GameVariables; //0x0674 
+	__int32 GameVariables_Count; //0x0678 
+	char _0x067C[372];
+	__int32 playerid; //0x07F0 
+	char _0x07F4[572];
+	CItem *InventorySlot[12]; //0x0A30 
+	CItem *QuickSlot[10]; //0x0A60 
+	char _0x0A88[12];
+	CWeaponPtr* weapon; //0x0A94 
+	char _0x0A98[8];
+	float pitch[30]; //0x0AA0 
+	char _0x0B18[284];
+	float recoil; //0x0C34 
+	char _0x0C38[8];
+	float recoilRandomX; //0x0C40 
+	float recoilRandomY; //0x0C44 
+	float recoilRandomZ; //0x0C48 
+	char _0x0C4C[4];
+	float fatigue_diff; //0x0C50 
+	float fatigue; //0x0C54 
+	char _0x0C58[20];
+	BYTE swim; //0x0C6C 
+	char _0x0C6D[107];
+	WORD state2; //0x0CD8 
+	char _0x0CDA[6];
+	WORD state; //0x0CE0 
+	char _0x0CE2[1534];
+	BYTE stance; //0x12E0 
+	char _0x12E1[3];
 
-};//Size=0x1304
+};//Size=0x12E4
 
 /*
 004CBB31  \.^\EB E8         jmp short DayZ.004CBB1B
@@ -706,24 +708,25 @@ public:
 //
 //};//Size=0x06B4
 
-class CWeapon {
+class CWeapon
+{
 public:
 	char _0x0000[112];
 	CObjectClass* ObjectClass; //0x0070 
-	char _0x0074[1584];
-	CItem **slots; //0x06A4 
-	__int32 num_slots; //0x06A8 
-	DWORD ammo_test1; //0x06AC 
-	char _0x06B0[8];
-	DWORD ammo_count1; //0x06B8 
-	char _0x06BC[4];
-	CWeaponPtr* magazine; //0x06C0 
-	DWORD ammo_test2; //0x06C4 
-	char _0x06C8[8];
-	DWORD ammo_count2; //0x06D0 
-	char _0x06D4[64];
+	char _0x0074[1600];
+	CItem **slots; //0x06B4 
+	__int32 num_slots; //0x06B8 
+	DWORD ammo_test1; //0x06BC 
+	char _0x06C0[8];
+	DWORD ammo_count1; //0x06C8 
+	char _0x06CC[4];
+	CWeaponPtr* magazine; //0x06D0 
+	DWORD ammo_test2; //0x06D4 
+	char _0x06D8[8];
+	DWORD ammo_count2; //0x06E0 
+	char _0x06E4[64];
 
-};//Size=0x0714
+};//Size=0x0724
 
 class CWeaponPtr
 {

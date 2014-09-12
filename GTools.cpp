@@ -18,7 +18,10 @@ void GTools::Log(const char* szText, ...)
 	_vsnprintf(szBuffer, sizeof(szBuffer)-1, szText, args);
 	va_end(args);
 
-	FILE* file = fopen("C:\\dayz_log.txt", "a+");
+	FILE* file = fopen("C:\\Users\\Gordon Freeman\\Desktop\\dayzlog.txt", "a + ");
+	if (!file)
+		return;
+
 	fprintf(file, "%s\n", szBuffer);
 	fclose(file);
 }

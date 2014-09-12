@@ -884,6 +884,31 @@ void GPlayerManager::DoPointerSearch()
 	CWeapon::ammo_count2: +0x13
 	CWeapon::magazine: +0x88
 	*/
+
+/*
+004DD240    56              push esi
+004DD241    8BF1            mov esi, ecx
+004DD243    8B0D 98D2F800   mov ecx, dword ptr ds:[F8D298]                                   ; DayZ.00F8D2AC
+004DD249    8B01            mov eax, dword ptr ds:[ecx]
+004DD24B    8B50 04         mov edx, dword ptr ds:[eax+4]
+004DD24E    68 D8060000     push 6D8
+004DD253    FFD2            call near edx                                                    ; vtable hook damit dann den jump forcen?; stdcall 1param
+004DD255    85C0            test eax, eax
+004DD257    74 11           je short DayZ.004DD26A
+004DD259    8B4C24 08       mov ecx, dword ptr ss:[esp+8]
+004DD25D    51              push ecx
+004DD25E    56              push esi
+004DD25F    8BC8            mov ecx, eax
+004DD261    E8 1AFCFFFF     call DayZ.004DCE80
+004DD266    5E              pop esi
+004DD267    C2 0400         retn 4
+004DD26A    33C0            xor eax, eax
+004DD26C    5E              pop esi
+004DD26D    C2 0400         retn 4
+
+
+
+*/
 }
 
 char *GPlayerManager::GetPlayerWeaponName(const CObject *obj)
